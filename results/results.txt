@@ -1,0 +1,76 @@
+# JMH version: 1.32
+# VM version: JDK 11.0.11, OpenJDK 64-Bit Server VM, 11.0.11+9-Ubuntu-0ubuntu2.18.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xms1G -Xmx1G -XX:+AlwaysPreTouch -XX:+UseSerialGC
+# Blackhole mode: full + dont-inline hint
+
+
+Benchmark                                              (bits)  (lastNonZeroByte)  (seed)  (size)  Mode  Cnt   Score    Error  Units
+LatencyBenchmark.varInt                                     7                N/A     N/A     N/A  avgt    5   5.815 ±  0.007  ns/op
+LatencyBenchmark.varInt                                    14                N/A     N/A     N/A  avgt    5   6.589 ±  0.010  ns/op
+LatencyBenchmark.varInt                                    21                N/A     N/A     N/A  avgt    5   7.953 ±  0.022  ns/op
+LatencyBenchmark.varInt                                    28                N/A     N/A     N/A  avgt    5   9.677 ±  0.011  ns/op
+LatencyBenchmark.varInt                                    35                N/A     N/A     N/A  avgt    5  11.987 ±  0.013  ns/op
+LatencyBenchmark.varInt                                    42                N/A     N/A     N/A  avgt    5  11.264 ±  0.011  ns/op
+LatencyBenchmark.varInt                                    49                N/A     N/A     N/A  avgt    5  13.274 ±  0.085  ns/op
+LatencyBenchmark.varInt                                    56                N/A     N/A     N/A  avgt    5  13.596 ±  0.005  ns/op
+LatencyBenchmark.varInt                                    62                N/A     N/A     N/A  avgt    5  14.683 ±  0.010  ns/op
+LatencyBenchmark.varIntCounted                              7                N/A     N/A     N/A  avgt    5   6.243 ±  0.006  ns/op
+LatencyBenchmark.varIntCounted                             14                N/A     N/A     N/A  avgt    5   8.141 ±  0.012  ns/op
+LatencyBenchmark.varIntCounted                             21                N/A     N/A     N/A  avgt    5   8.413 ±  0.148  ns/op
+LatencyBenchmark.varIntCounted                             28                N/A     N/A     N/A  avgt    5  11.235 ±  0.009  ns/op
+LatencyBenchmark.varIntCounted                             35                N/A     N/A     N/A  avgt    5  10.585 ±  0.008  ns/op
+LatencyBenchmark.varIntCounted                             42                N/A     N/A     N/A  avgt    5  12.034 ±  0.007  ns/op
+LatencyBenchmark.varIntCounted                             49                N/A     N/A     N/A  avgt    5  13.063 ±  0.012  ns/op
+LatencyBenchmark.varIntCounted                             56                N/A     N/A     N/A  avgt    5  15.085 ±  0.304  ns/op
+LatencyBenchmark.varIntCounted                             62                N/A     N/A     N/A  avgt    5  16.305 ±  0.017  ns/op
+VarIntEncodingBenchmark.basic                             N/A                  1      42    2048  avgt    5  18.516 ±  0.261  us/op
+VarIntEncodingBenchmark.basic                             N/A                  1      42    4096  avgt    5  45.097 ±  0.320  us/op
+VarIntEncodingBenchmark.basic                             N/A                  3      42    2048  avgt    5  23.653 ±  0.034  us/op
+VarIntEncodingBenchmark.basic                             N/A                  3      42    4096  avgt    5  48.013 ±  0.065  us/op
+VarIntEncodingBenchmark.basic                             N/A                  5      42    2048  avgt    5  28.310 ±  0.067  us/op
+VarIntEncodingBenchmark.basic                             N/A                  5      42    4096  avgt    5  56.623 ±  0.266  us/op
+VarIntEncodingBenchmark.basic                             N/A                  7      42    2048  avgt    5  32.577 ±  0.024  us/op
+VarIntEncodingBenchmark.basic                             N/A                  7      42    4096  avgt    5  63.262 ± 16.537  us/op
+VarIntEncodingBenchmark.counted                           N/A                  1      42    2048  avgt    5  20.809 ±  0.438  us/op
+VarIntEncodingBenchmark.counted                           N/A                  1      42    4096  avgt    5  50.810 ±  0.247  us/op
+VarIntEncodingBenchmark.counted                           N/A                  3      42    2048  avgt    5  24.897 ±  0.050  us/op
+VarIntEncodingBenchmark.counted                           N/A                  3      42    4096  avgt    5  48.709 ±  0.094  us/op
+VarIntEncodingBenchmark.counted                           N/A                  5      42    2048  avgt    5  26.443 ±  0.081  us/op
+VarIntEncodingBenchmark.counted                           N/A                  5      42    4096  avgt    5  51.809 ±  0.174  us/op
+VarIntEncodingBenchmark.counted                           N/A                  7      42    2048  avgt    5  27.986 ±  0.018  us/op
+VarIntEncodingBenchmark.counted                           N/A                  7      42    4096  avgt    5  56.646 ±  0.238  us/op
+VarIntEncodingBenchmark.countedSwitch                     N/A                  1      42    2048  avgt    5  18.411 ±  0.324  us/op
+VarIntEncodingBenchmark.countedSwitch                     N/A                  1      42    4096  avgt    5  54.061 ±  0.188  us/op
+VarIntEncodingBenchmark.countedSwitch                     N/A                  3      42    2048  avgt    5  19.342 ±  0.050  us/op
+VarIntEncodingBenchmark.countedSwitch                     N/A                  3      42    4096  avgt    5  40.523 ±  0.143  us/op
+VarIntEncodingBenchmark.countedSwitch                     N/A                  5      42    2048  avgt    5  17.862 ±  0.027  us/op
+VarIntEncodingBenchmark.countedSwitch                     N/A                  5      42    4096  avgt    5  35.757 ±  0.067  us/op
+VarIntEncodingBenchmark.countedSwitch                     N/A                  7      42    2048  avgt    5  19.266 ±  0.010  us/op
+VarIntEncodingBenchmark.countedSwitch                     N/A                  7      42    4096  avgt    5  38.764 ±  0.175  us/op
+VarIntEncodingBenchmark.smartUnrolled                     N/A                  1      42    2048  avgt    5  24.607 ±  0.357  us/op
+VarIntEncodingBenchmark.smartUnrolled                     N/A                  1      42    4096  avgt    5  51.866 ±  2.142  us/op
+VarIntEncodingBenchmark.smartUnrolled                     N/A                  3      42    2048  avgt    5  20.903 ±  0.251  us/op
+VarIntEncodingBenchmark.smartUnrolled                     N/A                  3      42    4096  avgt    5  42.564 ±  0.044  us/op
+VarIntEncodingBenchmark.smartUnrolled                     N/A                  5      42    2048  avgt    5  22.329 ±  0.024  us/op
+VarIntEncodingBenchmark.smartUnrolled                     N/A                  5      42    4096  avgt    5  44.676 ±  0.033  us/op
+VarIntEncodingBenchmark.smartUnrolled                     N/A                  7      42    2048  avgt    5  25.400 ±  0.014  us/op
+VarIntEncodingBenchmark.smartUnrolled                     N/A                  7      42    4096  avgt    5  51.246 ±  1.430  us/op
+VarIntEncodingBenchmark.smartUnrolledNoDataDependency     N/A                  1      42    2048  avgt    5  24.916 ±  0.254  us/op
+VarIntEncodingBenchmark.smartUnrolledNoDataDependency     N/A                  1      42    4096  avgt    5  52.043 ±  2.107  us/op
+VarIntEncodingBenchmark.smartUnrolledNoDataDependency     N/A                  3      42    2048  avgt    5  19.822 ±  0.062  us/op
+VarIntEncodingBenchmark.smartUnrolledNoDataDependency     N/A                  3      42    4096  avgt    5  39.697 ±  0.171  us/op
+VarIntEncodingBenchmark.smartUnrolledNoDataDependency     N/A                  5      42    2048  avgt    5  22.386 ±  0.017  us/op
+VarIntEncodingBenchmark.smartUnrolledNoDataDependency     N/A                  5      42    4096  avgt    5  46.840 ±  0.057  us/op
+VarIntEncodingBenchmark.smartUnrolledNoDataDependency     N/A                  7      42    2048  avgt    5  29.185 ±  0.145  us/op
+VarIntEncodingBenchmark.smartUnrolledNoDataDependency     N/A                  7      42    4096  avgt    5  53.546 ±  5.606  us/op
+VarIntEncodingBenchmark.unrolled                          N/A                  1      42    2048  avgt    5  25.443 ±  0.505  us/op
+VarIntEncodingBenchmark.unrolled                          N/A                  1      42    4096  avgt    5  51.540 ±  3.691  us/op
+VarIntEncodingBenchmark.unrolled                          N/A                  3      42    2048  avgt    5  20.210 ±  0.510  us/op
+VarIntEncodingBenchmark.unrolled                          N/A                  3      42    4096  avgt    5  41.252 ±  0.175  us/op
+VarIntEncodingBenchmark.unrolled                          N/A                  5      42    2048  avgt    5  22.089 ±  0.090  us/op
+VarIntEncodingBenchmark.unrolled                          N/A                  5      42    4096  avgt    5  44.068 ±  0.035  us/op
+VarIntEncodingBenchmark.unrolled                          N/A                  7      42    2048  avgt    5  24.733 ±  0.012  us/op
+VarIntEncodingBenchmark.unrolled                          N/A                  7      42    4096  avgt    5  49.576 ±  0.221  us/op
+
+
